@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+    <style>
+      p,
+      input {
+        font-size: 20px;
+        color: teal;
+      }
+
+      a {
+        text-decoration: none;
+      }
+
+      .link {
+        width: 600px;
+      }
+
+      form.form {
+        display: table;
+        font-size: 20px;
+      }
+
+      div.form {
+        display: table-row;
+      }
+
+      label,
+      input {
+        display: table-cell;
+        margin-bottom: 10px;
+      }
+
+      label {
+        padding-right: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <p>Welcome to <%= title %> url shortener</p>
+    <form action="/api/short" method="post" class="form">
+      <div class="form">
+        <input
+          placeholder="Enter your long url"
+          type="url"
+          name="link"
+          id="link"
+          class="link"
+          required
+        />
+      </div>
+      <div class="form">
+        <input type="submit" value="Get Short Link" />
+      </div>
+    </form>
+    <h2><a href="<%=link%>" target="_blank"><%=link%></a></h2>
+  </body>
+</html>
