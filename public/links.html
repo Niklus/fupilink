@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>fupilink</title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <style>
+      body {
+        display: block;
+        text-align: left;
+      }
+      .btn,
+      h2 {
+        padding: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Your Links</h2>
+
+    <h3><a class="btn" href="/">Home</a></h3>
+
+    <div class="links">
+      <p>You have no links</p>
+    </div>
+
+    <script>
+      const links = JSON.parse(localStorage.getItem("links")) || [];
+      let linksContainer = document.querySelector(".links");
+
+      if (links.length) {
+        linksContainer.innerHTML = "";
+
+        links.forEach((link) => {
+          console.log(link);
+          linksContainer.innerHTML += `
+            <div style="background: #fff; padding: 10px; border-radius: 5px; margin: 10px; overflow: scroll">
+              <p> Short: <a target="_blank" href="${link.shortUrl}">${link.shortUrl}</a></p>
+              <p> Long: <a target="_blank" href="${link.longUrl}">${link.longUrl}</a></p>
+            </div>
+          `;
+        });
+      }
+    </script>
+  </body>
+</html>
