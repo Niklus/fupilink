@@ -4,8 +4,8 @@ const path = require("path");
 const cookieParser = require("cookie-parser");
 const logger = require("morgan");
 
-const indexRouter = require("./routes/index");
-const urlsRouter = require("./routes/urls");
+const indexRouter = require("./routes/index.router");
+const urlsRouter = require("./routes/urls.router");
 
 const app = express();
 
