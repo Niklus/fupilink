@@ -1,6 +1,6 @@
 # fupilink
 
-fupilink is a url shortener find it at [https://fupilink.com](https://fupilink.com)
+fupilink is a url shortener find it at [fupilink.com](https://fupilink.com)
 
 fupi means short in swahili
 
