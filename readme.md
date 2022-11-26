@@ -1,8 +1,10 @@
 # fupilink
 
-fupilink is a url shortener find it [here](https://fupilink.com)
+fupilink is a url shortener find it at [https://fupilink.com](https://fupilink.com)
+
+fupi means short in swahili
 
 # Todos:
 
 - Set link expiry
-- SEO
+- Make it work with git clone
